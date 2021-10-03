@@ -2,9 +2,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { useTheme } from 'native-base'
 
 import React from 'react'
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import BrazilNews from '../screens/brazilnews/BrazilNews'
-import { ROUTE_BRAZIL_NEWS } from './AppRoutes'
+import Platforms from '../screens/platforms/Platforms'
+import { ROUTE_BRAZIL_NEWS, ROUTE_PLATFORMS } from './AppRoutes'
 
 const Tab = createBottomTabNavigator()
 
@@ -16,6 +16,13 @@ const TabNavigation = () => {
                     {
                         title: 'Brazil News'
     
+                    }
+                } />
+            <Tab.Screen name={ROUTE_PLATFORMS} component={Platforms}
+                options={
+                    {
+                        title: 'Platforms'
+
                     }
                 } />
         </Tab.Navigator>
