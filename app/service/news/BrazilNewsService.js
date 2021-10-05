@@ -11,6 +11,10 @@ const getBrazilNews = async () => {
     let result = brazilNewsList.map(res => {
         return {
             title: res.title,
+            description: res.description,
+            url: res.url,
+            publishedAt: res.publishedAt,
+            content: res.content,
             urlToImage: res.urlToImage,
             source_name: res.source.name,
         }
